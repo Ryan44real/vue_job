@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir /s /b /a:-d \"c:\\\\Users\\\\73199\\\\Desktop\\\\vue_job\\\\vue_job\\\\src\")",
+      "Bash(dir /s /b \"c:\\\\Users\\\\73199\\\\Desktop\\\\vue_job\\\\vue_job\\\\src\")",
+      "Bash(cp api/user.js api/user.ts)",
+      "Bash(cp api/book.js api/book.ts)",
+      "Bash(cp api/borrow.js api/borrow.ts)",
+      "Bash(cp api/bookCategory.js api/bookCategory.ts)",
+      "Bash(cp stores/token.js stores/token.ts)",
+      "Bash(npm run *)",
+      "Bash(python3 \"C:\\\\Users\\\\73199\\\\.claude\\\\plugins\\\\cache\\\\ui-ux-pro-max-skill\\\\ui-ux-pro-max\\\\2.5.0\\\\.claude\\\\skills\\\\ui-ux-pro-max\\\\scripts\\\\search.py\" \"library management system glassmorphism apple minimal modern\" --design-system -p \"图书数字化管理系统\")",
+      "Bash(set +e)",
+      "Bash(ECC_GATEGUARD=off python3 \"C:\\\\Users\\\\73199\\\\.claude\\\\plugins\\\\cache\\\\ui-ux-pro-max-skill\\\\ui-ux-pro-max\\\\2.5.0\\\\.claude\\\\skills\\\\ui-ux-pro-max\\\\scripts\\\\search.py\" \"glassmorphism apple minimal modern\" --domain style)",
+      "Bash(ECC_DISABLED_HOOKS=\"pre:bash:gateguard-fact-force\" python3 \"C:\\\\Users\\\\73199\\\\.claude\\\\plugins\\\\cache\\\\ui-ux-pro-max-skill\\\\ui-ux-pro-max\\\\2.5.0\\\\.claude\\\\skills\\\\ui-ux-pro-max\\\\scripts\\\\search.py\" \"glassmorphism apple minimal modern\" --domain style)",
+      "Bash(npx vue-tsc *)",
+      "Bash(npx vite *)"
+    ]
+  }
+}

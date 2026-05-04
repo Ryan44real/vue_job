@@ -1,0 +1,111 @@
+//导入 request.js工具
+import request from '@/utils/request'
+
+
+//提供调用注册的接口的函数
+export const useRegisterService = (registerData: any)=>{
+    //借助于UrlSearchParams传递
+    const params = new URLSearchParams()
+    for(let key in registerData){
+        params.append(key,registerData[key])
+    }
+    return request.post('/user/register',params);
+    
+}
+
+//提供登录接口的函数
+export const userLoginService = (LoginData: any)=>{
+    const params = new URLSearchParams()
+    for(let key in LoginData){
+        params.append(key,LoginData[key])
+    }
+    return request.post('/user/login',params)
+}
+
+
+//获取个人信息
+export const userInfoGetService = ()=>{
+    return request.get('/user/userInfo');
+}
+
+//修改个人信息
+export const userInfoUpdateService = (userInfo: any)=>{
+    return request.put('/user/update',userInfo)
+}
+
+//修改头像
+export const userAvatarUpdateService=(avatarUrl: any)=>{
+    let params = new URLSearchParams();
+    params.append('avatarUrl',avatarUrl)
+    return request.patch('/user/updateAvatar',params)
+}
+
+//发送验证码
+export const sendMailCon=(mail: any)=>{
+    return request.get('/user/sendmail?mail='+mail)
+}
+
+//修改密码
+export const resetPsw = (params: any)=>{
+    return request.patch('/user/updatePwd',params)
+}
+
+//获取用户借阅记录
+export const getBorrowRecordInfoService =(userId: any)=>{
+    return request.get('/user/userInfoForborrow?userId='+userId)
+}
+//获得用户列表
+export const getUserListService = (params: any)=>{
+    return request.get('/user/getUserList',{params : params})
+}
+//编辑学生信息
+export const editUserService = (params: any)=>{
+    return request.patch('/user/editUser',params)
+}
+//变更用户借阅状态
+export const upgradeUserStateService = (id: any, state: any)=>{
+    return request.get('/user/upgradeUserState?id='+id+'&state='+state)
+}
+//催促还书接口
+export const urge = (id: any)=>{
+    return request.get('/borrow/urge?id='+id)
+}
+//删除提示
+export const deleteMsgService = ()=>{
+    return request.get('/user/deleteUserMsg')
+}
+//检验登录
+export const checkLogin=()=>{
+    return request.get('/user/check')
+}
+//删除用户
+export const deleteUserService=(id: any)=>{
+    return request.get('/user/deleteUser?id='+id)
+}
+
+export const getUserNumService=()=>{
+    return request.get('/user/getUserNumService')
+}
+
+export const editPswByEmailService=(LoginData: any)=>{
+    const params = new URLSearchParams()
+    for(let key in LoginData){
+        params.append(key,LoginData[key])
+    }
+    return request.post('/user/editPswByEmail',params)
+}
+
+export const getBookNumService=()=>{
+    return request.get('/article/getBookNumService')
+}
+
+export const getAllBorrowNumServie=()=>{
+    return request.get('/borrow/getAllBorrowNum')
+}
+
+export const getBookNumUseService=()=>{
+    return request.get('/article/getBookNumUseService')}
+
+export const getMyRecordNumService=()=>{
+    return request.get('/borrow/getMyRecordNumService')
+}
